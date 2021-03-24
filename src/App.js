@@ -28,8 +28,12 @@ function App() {
       <ArchiveContextProvider>
         <div className="App">
           <picture id="background">
-            <source srcSet="/images/background.webp" type="image/webp" />
-            <img src="/images/background.jpg" alt="background" loading="lazy" />
+            <source srcSet="./images/background.webp" type="image/webp" />
+            <img
+              src="./images/background.jpg"
+              alt="background"
+              loading="lazy"
+            />
           </picture>
           {error && <ErrorPage error={error} />}
           {showStartScreen && <StartScreen startApp={startApp} />}
