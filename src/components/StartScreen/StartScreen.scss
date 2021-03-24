@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Pokemon-Hollow";
+  src: local("Pokemon"),
+    url(../../fonts/Pokemon/Pokemon-Hollow.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Pokemon-Solid";
+  src: local("Pokemon"),
+    url(../../fonts/Pokemon/Pokemon-Solid.ttf) format("truetype");
+}
+
+@mixin stroke($color: #000, $size: 1px) {
+  text-shadow: -#{$size} -#{$size} 0 $color, 0 -#{$size} 0 $color,
+    #{$size} -#{$size} 0 $color, #{$size} 0 0 $color, #{$size} #{$size} 0 $color,
+    0 #{$size} 0 $color, -#{$size} #{$size} 0 $color, -#{$size} 0 0 $color;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#start-screen {
+  text-align: center;
+
+  #app-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: contrast(75%) brightness(85%) blur(0.5rem);
+    transform: scale(1.1);
+    object-fit: cover;
+    object-position: left;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  #title {
+    margin: 10rem 0 0 0;
+    font-family: Pokemon-Solid, Arial, sans-serif;
+    font-size: 5rem;
+    color: yellow;
+    -webkit-text-stroke: 2px rgb(70, 90, 160);
+    text-shadow: -5px 3px 0 rgb(25, 65, 120);
+    animation: fall 1s ease-out;
+  }
+
+  #subtitle {
+    margin: 3rem 0 0 0;
+    font-family: Pokemon-Solid, Arial, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(70, 90, 160);
+    @include stroke(white, 2px);
+    animation: fall 1s ease-out;
+  }
+
+  #play-button {
+    margin-top: 10rem;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    font-weight: bold;
+    font-size: 1.25rem;
+    @include stroke(black, 0px);
+    animation: fade-in 2s ease;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    &:focus {
+      filter: brightness(90%);
+      box-shadow: 0 0 0 5px rgba(255, 50, 50, 0.5);
+    }
+
+    &:active {
+      filter: brightness(80%);
+    }
+
+    i.fa {
+      margin-left: 0.2rem;
+    }
+  }
+}

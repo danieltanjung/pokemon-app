@@ -1,0 +1,15 @@
+.modal {
+  #modal__buttons {
+    float: right;
+
+    .btn {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &-footer {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
