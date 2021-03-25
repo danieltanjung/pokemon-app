@@ -1,7 +1,7 @@
 # Pokemon ~ Catch & Collect Them All
 
 This is a simple react app that lets you collect pokemons for free!
-This app was developed using the provided open-source API from [here](https://github.com/mazipan/graphql-pokeapi)
+This app was developed using the provided open-source API from [here](https://github.com/mazipan/graphql-pokeapi).
 
 ## Detailed pokemon's information
 
