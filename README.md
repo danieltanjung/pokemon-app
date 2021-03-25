@@ -1,7 +1,7 @@
-# Pokemon ~Catch & Collect Them All~
+# Pokemon ~ Catch & Collect Them All
 
 This is a simple react app that lets you collect pokemons for free!
-This app was developed using the provided open-source API from: https://github.com/mazipan/graphql-pokeapi.
+This app was developed using the provided open-source API from [here](https://github.com/mazipan/graphql-pokeapi)
 
 ## Detailed pokemon's information
 
@@ -18,4 +18,4 @@ A great pokemon trainer should care for their own pokemons.  The first step to b
 
 ## Start your journey right now!
 
-Link: https://danieltanjung.github.io/pokemon-app/
+[Start your journey](https://danieltanjung.github.io/pokemon-app/)
